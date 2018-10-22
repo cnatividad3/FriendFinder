@@ -1,13 +1,13 @@
 
-const friendsData = require("../data/friends");
+const surveyData = require("../data/friends");
 
 
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
-    res.json(friendsData);
+    res.json(surveyData);
   })
 
   app.post("/api/friends", function(req, res) {
-    friendsData.push(req.body);
+    surveyData.push(req.body);
   })
 }
